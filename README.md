@@ -31,6 +31,12 @@ Install the following:
 
 ### Running
 
+Build and publish docker image locally:
+
+`sbt docker:publishLocal`
+
+After the aforementioned command finished successfully you should see the following two images in your local docker image registry: `grpcservice:0.1.0-SNAPSHOT` and `httptogrpc:0.1.0-SNAPSHOT`.
+
 Once minikube is running and ingress enabled with `minikube addons enable ingress`, the two applications can be deployed using:
 
 `kubectl apply -f kubernetes/grpcservice.yml`
